@@ -30,6 +30,7 @@ libonig-dev && \
     apt-get install -y iputils-ping && \
     apt-get install -y libxml2-dev && \
     apt-get install -y libmcrypt-dev && \
+    apt-get install -y 
     apt-get -y --no-install-recommends install --fix-missing libcurl4 \
 libcurl4-openssl-dev \
 zip \
@@ -70,7 +71,8 @@ RUN docker-php-ext-install mysqli && \
     docker-php-ext-install calendar && \
     docker-php-ext-install exif && \
     docker-php-ext-install soap && \
-    docker-php-ext-install xml
+    docker-php-ext-install xml && \
+    docker-php-ext-install xsl
 
 
 # Install Freetype 
