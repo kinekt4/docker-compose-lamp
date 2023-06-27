@@ -29,8 +29,8 @@ curl \
 libonig-dev && \ 
     apt-get install -y iputils-ping && \
     apt-get install -y libxml2-dev && \
+    apt-get install -y libxslt1-dev && \
     apt-get install -y libmcrypt-dev && \
-    apt-get install -y 
     apt-get -y --no-install-recommends install --fix-missing libcurl4 \
 libcurl4-openssl-dev \
 zip \
