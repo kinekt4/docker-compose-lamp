@@ -28,6 +28,8 @@ git \
 curl \
 libonig-dev && \ 
     apt-get install -y iputils-ping && \
+    apt-get install -y libxml2-dev && \
+    apt-get install -y libmcrypt-dev && \
     apt-get -y --no-install-recommends install --fix-missing libcurl4 \
 libcurl4-openssl-dev \
 zip \
@@ -53,7 +55,9 @@ RUN apt-get update && \
 
 # Other PHP7 Extensions
 
-RUN docker-php-ext-install pdo_mysql && \
+RUN docker-php-ext-install mysql && \
+    docker-php-ext-install pdo && \
+    docker-php-ext-install pdo_mysl && \
     docker-php-ext-install pdo_sqlite && \
     docker-php-ext-install bcmath && \
     docker-php-ext-install mysqli && \
@@ -65,7 +69,13 @@ RUN docker-php-ext-install pdo_mysql && \
     docker-php-ext-install mbstring && \
     docker-php-ext-install gettext && \
     docker-php-ext-install calendar && \
-    docker-php-ext-install exif
+    docker-php-ext-install exif && \
+    docker-php-ext-install soap && \
+    docker-php-ext-install pear && \
+    docker-php-ext-install xml && \
+    docker-php-ext-install -j$(nproc) gd && \
+    docker-php-ext-install -j$(nproc) mcrypt
+
 
 
 # Install Freetype 
