@@ -70,10 +70,7 @@ RUN docker-php-ext-install mysqli && \
     docker-php-ext-install calendar && \
     docker-php-ext-install exif && \
     docker-php-ext-install soap && \
-    docker-php-ext-install xml && \
-    docker-php-ext-install -j$(nproc) gd && \
-    docker-php-ext-install -j$(nproc) mcrypt
-
+    docker-php-ext-install xml
 
 
 # Install Freetype 
