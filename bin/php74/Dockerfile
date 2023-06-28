@@ -72,7 +72,9 @@ RUN docker-php-ext-install mysqli && \
     docker-php-ext-install exif && \
     docker-php-ext-install soap && \
     docker-php-ext-install xml && \
-    docker-php-ext-install xsl
+    docker-php-ext-install xsl && \
+    docker-php-ext-install sodium && \
+    docker-php-ext-install sockets
 
 
 # Install Freetype 
